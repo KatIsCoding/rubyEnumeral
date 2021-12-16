@@ -1,3 +1,5 @@
+require './my_enumerable'
+
 class MyList
   def initialize(*list)
     @list = list
@@ -6,4 +8,6 @@ class MyList
   def each(&block)
     @list.each(&block)
   end
+
+  include MyEnumerable
 end
